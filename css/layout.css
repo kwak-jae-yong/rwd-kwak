@@ -1,34 +1,35 @@
-
 header {
-    position: fixed; /* header 전체의 위치를 고정*/
+    position: fixed;
+    /* header 전체의 위치를 고정*/
     z-index: 3;
     width: 100%;
     padding: 1rem 2rem;
 }
 
-header .rel{
-    display: flex; 
+header .rel {
+    display: flex;
     /*header에 속해있는 .rel(부모)에게 flex부여.*/
     justify-content: space-between;
-     /*화면 양끝에 내용 배치*/
- align-items: center;
+    /*화면 양끝에 내용 배치*/
+    align-items: center;
 
 }
 
-header h1{
-    font-size:2rem;
+header h1 {
+    font-size: 2rem;
     font-style: normal;
     color: white;
 }
 
-.header_btn{      
+.header_btn {
     width: 2.4rem;
-    height:1.4rem;
+    height: 1.4rem;
     position: relative;
-      /*.header_btn에 position을 relative부여하여 위치를 바꾸는데 용이하게 설정.*/
+    /*.header_btn에 position을 relative부여하여 위치를 바꾸는데 용이하게 설정.*/
 }
 
-.header_btn span{ /*햄버거 메뉴를 만들기위한 코드*/
+.header_btn span {
+    /*햄버거 메뉴를 만들기위한 코드*/
     content: "";
     display: block;
     height: .3rem;
@@ -39,29 +40,31 @@ header h1{
 
 }
 
-.header_btn span:nth-child(1){
+.header_btn span:nth-child(1) {
     top: 0;
 }
-.header_btn span:nth-child(2){
-top: .8rem;
-}
-.header_btn span:nth-child(3){
-top: 1.6rem;
+
+.header_btn span:nth-child(2) {
+    top: .8rem;
 }
 
-.nav_list{
+.header_btn span:nth-child(3) {
+    top: 1.6rem;
+}
+
+.nav_list {
     display: flex;
     position: absolute;
     right: -100%;
     /*이후에 animation을 적용할때를위해 보이지않게 이동시킴*/
     top: 6rem;
     gap: 2rem;
-    flex-direction: column; 
+    flex-direction: column;
     /*.nav_list에 flex를 부여해야 flex-direction으로 colum,row를 부여할수있음*/
     transition: right .3s;
 }
 
-.nav_list a{
+.nav_list a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,33 +76,37 @@ top: 1.6rem;
     transition: all .3s;
 }
 
-header.navOpen .nav_list{
- right: 0%;
-} /*toggle을 활용하여 햄버거 메뉴를 클릭했을떄 nav_list가 출력되게 설정.*/
+header.navOpen .nav_list {
+    right: 0%;
+}
+
+/*toggle을 활용하여 햄버거 메뉴를 클릭했을떄 nav_list가 출력되게 설정.*/
 
 
-header.navOpen .header_btn span:nth-child(1){
+header.navOpen .header_btn span:nth-child(1) {
     transform: rotate(90deg);
     top: .6rem;
 }
-header.navOpen .header_btn span:nth-child(2){
+
+header.navOpen .header_btn span:nth-child(2) {
     transform: translate3d(100%);
     opacity: 0;
 }
-header.navOpen .header_btn span:nth-child(3){
+
+header.navOpen .header_btn span:nth-child(3) {
     transform: rotate(180deg);
     top: .6rem;
 }
 
 
 
-.dep1{
-   height: 100vh;
-   background: url(../img/bg.png) no-repeat center/cover;
-padding-bottom: 5rem;
+.dep1 {
+    height: 100vh;
+    background: url(../img/bg.png) no-repeat center/cover;
+    padding-bottom: 5rem;
 }
 
-.dep1 .rel{
+.dep1 .rel {
     display: flex;
     /*dep1 .rel을 flex지정하여 가운데 정렬하기위함*/
     align-items: flex-end;
@@ -107,13 +114,13 @@ padding-bottom: 5rem;
     text-align: center;
 }
 
-.dep1 .tit_wrap{
+.dep1 .tit_wrap {
     color: white;
 }
 
 
 
-.spin_ico{
+.spin_ico {
     width: 5rem;
     display: inline-block;
     animation: spin_ico 1s infinite alternate;
@@ -121,15 +128,17 @@ padding-bottom: 5rem;
 
 
 
-@keyframes spin_ico{
-    from{
+@keyframes spin_ico {
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
-.fixedTop{
+
+.fixedTop {
     position: fixed;
     width: 5rem;
     height: 5rem;
@@ -142,7 +151,7 @@ padding-bottom: 5rem;
     transition: all .3s;
     cursor: pointer;
     border-radius: 50%;
-   
+
 }
 
 header.scroll {
@@ -154,19 +163,20 @@ header.scroll .fixedTop {
     transform: translateY(0);
 }
 
-header.scroll.navOpen .nav_list a{
+header.scroll.navOpen .nav_list a {
     background-color: rgba(0, 139, 139, 0.70);
 }
-.dep2 .img_wrap{
+
+.dep2 .img_wrap {
     max-width: 80rem;
     min-width: 30rem;
-   
+    margin-top: 3rem;
     height: 41rem;
     border-radius: 2rem;
     background: url(../img/dep2bg.png) no-repeat left center/110%;
 }
 
-.dep3::before{
+.dep3::before {
     display: block;
     content: "";
     width: 100%;
@@ -179,26 +189,26 @@ header.scroll.navOpen .nav_list a{
 
 
 
-.dep3 .img_wrap{
+.dep3 .img_wrap {
     max-width: 60rem;
     min-width: 30rem;
-    
+    margin-top: 3rem;
     height: 30rem;
     border-radius: 2rem;
     background: url(../img/pukuok.png) no-repeat center/110%;
 }
 
-.dep4{
+.dep4 {
     text-align: center;
 }
 
-.dep4 h1{
+.dep4 h1 {
     position: relative;
-  
+
 }
 
 
-.dep4 h1:before{
+.dep4 h1:before {
     display: block;
     content: "";
     width: 5.5rem;
@@ -210,8 +220,8 @@ header.scroll.navOpen .nav_list a{
     transform: rotate(45deg);
 }
 
-.dep4 h1::after{
-    
+.dep4 h1::after {
+
     display: block;
     content: "";
     width: 5.5rem;
@@ -223,18 +233,20 @@ header.scroll.navOpen .nav_list a{
     transform: rotate(135deg);
 }
 
-.dep4 h1 span{
+.dep4 h1 span {
     display: block;
 }
 
-.dep4 h1 span:nth-child(1){  /* span을 이용한 장식만들기*/
+.dep4 h1 span:nth-child(1) {
+    /* span을 이용한 장식만들기*/
     transform: translateX(-3rem);
 }
-.dep4 h1 span:nth-child(2){
+
+.dep4 h1 span:nth-child(2) {
     transform: translateX(1rem);
 }
 
-.dep4_list{
+.dep4_list {
     margin-top: 7.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -242,44 +254,45 @@ header.scroll.navOpen .nav_list a{
     justify-content: center;
 }
 
-.dep4_list li{
+.dep4_list li {
     width: calc(50% - 1rem);
     min-height: 15rem;
     max-width: 15rem;
 }
 
-.dep4_list li a{
+.dep4_list li a {
     display: flex;
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
     border-radius: 2rem;
-    background-color:  rgba(0, 139, 139, 0.70);
+    background-color: rgba(0, 139, 139, 0.70);
     text-transform: uppercase;
     color: black;
     font-size: 1.6rem;
 }
 
-.dep5 .img_wrap{
+.dep5 .img_wrap {
     height: 27.5rem;
     max-width: 36rem;
     margin: 8rem auto 0;
 }
 
-.dep5 .img_wrap .deco1{
+.dep5 .img_wrap .deco1 {
     background-image: url(../img/depth5_deco1.png);
 }
 
-.dep5 .img_wrap .deco2{
+.dep5 .img_wrap .deco2 {
     background-image: url(../img/depth5_deco2.png);
 }
-.dep5 .img_wrap .deco3{
+
+.dep5 .img_wrap .deco3 {
     background-image: url(../img/depth5_deco3.png);
 }
 
 
-.dep5 .tit_wrap h1 span{
+.dep5 .tit_wrap h1 span {
     display: block;
     font-size: 2.9rem;
     margin-top: 1rem;
@@ -287,7 +300,7 @@ header.scroll.navOpen .nav_list a{
 
 /* 6 */
 .dep6 {
-overflow: hidden;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -424,7 +437,7 @@ footer h3 {
 }
 
 .foot-list li a {
-    background-color:rgba(0, 139, 139, 0.70);
+    background-color: rgba(0, 139, 139, 0.70);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -65,7 +65,9 @@
         left: 2rem;
     }
 
-    
+    .dep6-slide-wrap .swiper {
+        
+    }
 
     footer {
         display: flex;
@@ -84,8 +86,6 @@
 }
 
 @media screen and (min-width:1110px) {
-
-    
     .rel {
         max-width: 160rem;
         margin: auto;
@@ -100,7 +100,6 @@
 
     header .scroll {
         height: 5rem;
-        background-color: rgba(0, 139, 139, 0.70);
         
     }
 
